@@ -1,7 +1,8 @@
+# Hong Kong
 l3_interfaces:
-  - interface_type: Ethernet
+  - interface_type: em
     interface_id: 1
-    description: em1
+    description: Ethernet interface
     ip_address: 10.222.28.1
     subnet_mask: 255.255.255.0
     

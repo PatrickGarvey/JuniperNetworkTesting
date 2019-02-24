@@ -1,8 +1,14 @@
 # London
 l3_interfaces:
+<<<<<<< HEAD
   - interface_type: Ethernet
-    interface_id: 2
+    interface_id: 1
     description: em1
+=======
+  - interface_type: em
+    interface_id: 1
+    description: Ethernet interface
+>>>>>>> 3d767ac1862a4225e5cefb19e10187f98b01c92e
     ip_address: 10.222.28.2
     subnet_mask: 255.255.255.0
    
