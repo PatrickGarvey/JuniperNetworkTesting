@@ -1,0 +1,14 @@
+---
+- name: load other configuration
+  hosts: routers
+  roles:
+   - Juniper.junos
+  connection: local
+  
+  tasks:
+    - name: Load other configuration 
+      juniper_junos_config:
+        load: "merge"
+        src: "/etc/ansible/other_vars/{{ inventory_hostname }}.conf"
+      register: response
+

@@ -1,8 +1,8 @@
-# London
+# Tokyo
 l3_interfaces:
   - interface_type: em
     interface_id: 1
     description: Ethernet interface
     ip_address: 10.222.28.2
-    subnet_mask: 255.255.255.0
+    prefix: 24
    

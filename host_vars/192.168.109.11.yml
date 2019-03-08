@@ -4,6 +4,15 @@ l3_interfaces:
     interface_id: 1
     description: Ethernet interface
     ip_address: 10.222.28.1
-    subnet_mask: 255.255.255.0
-    
-# TODO: add other interfaces
+    prefix: 24
+  - interface_type: em
+    interface_id: 2
+    description: Ethernet interface
+    ip_address: 10.222.29.1
+    prefix: 24
+  - interface_type: em
+    interface_id: 3
+    description: Ethernet interface
+    ip_address: 10.222.5.1
+    prefix: 24    
+

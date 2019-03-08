@@ -1,0 +1,21 @@
+---
+- name: "Get Junos OS configurtaion"
+  hosts: routers
+  roles:
+   - Juniper.junos
+#  connection: local
+
+  tasks:
+   - name: "get configuration"
+     juniper_junos_config:
+       load: "set"
+       lines:
+        - "set system scripts op file init.slax"
+     register: response
+
+     #  retrieve: "commited"
+      # diff: false
+      # commit: false
+      # check: false
+      # dest: "{{inventory_hostname}}.conf"
+    # register: response

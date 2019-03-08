@@ -1,0 +1,13 @@
+---
+- name: Generate NETCONF interface config
+  with_items: "{{l3_interfaces}}"
+  template:
+    src: "files/interface_template.j2"
+    dest: "./configs/{{inventory_hostname}}-{{item.interface_type}}{{item.interface_id}}.xml"
+
+- name: Configure Interfaces with NETCONF
+  with_items: "{{l3_interfaces}}"
+  netconf_config:
+    host: "{{inventory_hostname}}"
+    hostkey_verify: false
+    src: "./configs/{{inventory_hostname}}-{{item.interface_type}}{{item.interface_id}}.xml"

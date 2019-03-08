@@ -1,0 +1,19 @@
+<config>
+  <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+    <interface>
+      <name>em1</name>
+      <unit>
+        <name>0</name>
+        <family>
+          <name>inet</name>
+          <ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+            <address>
+              <ip>10.222.28.1</ip>
+              <netmask>255.255.255.0</netmask>
+            </address>
+          </ipv4>
+        </family>
+      </unit>
+    </interface>
+  </interfaces>
+</config>

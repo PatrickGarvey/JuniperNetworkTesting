@@ -1,0 +1,11 @@
+
+- name: Configure l3 Interfaces
+  with_items: "{{l3_interfaces}}"
+  #junos_config:
+   # lines:
+    # - set interfaces em1 unit 0 description "another test"
+    # - set interfaces {{item.interface_type}}{{item.interface_id}} unit 0 family inet address {{item.ip_address}}
+  junos_l3_interface:
+    name: "{{item.interface_type}}{{item.interface_id}}"
+    ipv4: "{{item.ip_address}}/{{item.prefix}}"
+

@@ -1,0 +1,14 @@
+---
+- name: load ospf  configuration
+  hosts: routers
+  roles:
+   - Juniper.junos
+  connection: local
+  
+  tasks:
+    - name: Load ospf configuration 
+      juniper_junos_config:
+        load: "merge"
+        src: "/etc/ansible/ospf_vars/{{ inventory_hostname }}.conf"
+      register: response
+
